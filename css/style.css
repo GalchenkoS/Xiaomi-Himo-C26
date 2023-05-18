@@ -1,0 +1,705 @@
+/*обнуляем шрифты*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+/*меняет подсчет ширины блока так что бы было удобней верстать*/
+*,
+*::before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*убераем линии обводки у некоторых браузеров*/
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+/*перечисляем некоторые html5 теги и добавляем значение блок что делает их блочными*/
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+/*применяем параметры которые уравнивают поведение шрифтов и элементов для разных браузеров*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+/*обращаемся к тегам форм и просим унаследовать шрифт*/
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+/*несколько параметров к разным тегам которые уберают особенности в разных браузерах*/
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+/*обнуляем все заголовки h*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*----------------------------------------*/
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #131313;
+}
+.header {
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu {
+  margin-right: 70px;
+}
+.logo {
+}
+.menu__list {
+  display: flex;
+}
+.menu__item + .menu__item {
+  padding-left: 10px;
+}
+.menu__links {
+  color: inherit;
+  text-transform: uppercase;
+  padding: 43px 20px;
+}
+.menu__links:hover {
+  background-color: #131313;
+  color: white;
+  transition: all 1s;
+}
+.bike {
+  padding: 100px 0 150px;
+}
+.bike__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.bike__colomm__text {
+}
+.bike__title {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  margin: 60px 0 5px;
+}
+.bike__subtitle {
+  margin: 5px 0 60px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #6f6f6f;
+}
+.bike__text {
+  max-width: 420px;
+  margin: 0px 0px 20px 0px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+}
+/*----------------------------*/
+.bike__colomm {
+  flex-basis: 630px;
+  margin-left: 30px;
+  max-width: 630px;
+}
+.slider .slick-dots {
+  right: 0px;
+  top: 60px;
+}
+
+.slick-dots {
+  position: absolute;
+}
+.slick-dots li + li {
+  padding-top: 10px;
+}
+.slick-dots button {
+  font-size: 0;
+  padding: 0;
+  border: none;
+  background-color: #131313;
+  width: 2px;
+  height: 25px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: red;
+}
+.slick-active button {
+  background-color: #ff4040;
+}
+/*--------------------*/
+.bike__link {
+  display: inline-block;
+  margin-top: 80px;
+  padding: 28px 71px;
+  text-transform: uppercase;
+  background-color: #131313;
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 1.1em;
+}
+.bike__link:hover {
+  background-color: #ff4040;
+}
+.bike__list {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.bike__list-item {
+  min-width: 160px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.bike__list-item h4 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  padding-bottom: 13px;
+}
+.bike__list-item p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: lowercase;
+}
+
+/*----------------------*/
+.info {
+  margin-bottom: 150px;
+  color: #131313;
+}
+.container {
+}
+.info__inner {
+  display: flex;
+}
+.images__info-img {
+  margin-right: 60px;
+  flex-basis: 570px;
+  object-fit: cover;
+}
+.info__list {
+  flex-basis: 490px;
+}
+.info__item + .info__item {
+  padding-top: 50px;
+}
+.info__item-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.info__item-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  max-width: 450px;
+}
+
+/*----------------------*/
+.characteristics {
+  margin-bottom: 150px;
+}
+.characteristics__title__header {
+  margin: 0 0 40px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+.characteristics__inner {
+  display: flex;
+}
+.characteristics__img {
+  align-self: center;
+}
+.characteristics__items {
+  flex-basis: 570px;
+  margin-right: 60px;
+}
+.characteristics__list + .characteristics__list {
+  padding-top: 30px;
+}
+.characteristics__title {
+  padding: 2px 0 3px;
+  background-color: #131313;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+.characteristics__line {
+  display: flex;
+  padding-top: 5px;
+}
+.characteristics__name {
+  flex-basis: 285px;
+  padding-right: 25px;
+}
+.characteristics__descr {
+  flex-basis: 285px;
+}
+
+/*----------------------*/
+
+.slider__photo {
+  margin-bottom: 50px;
+}
+.slider__item {
+  padding-left: 50px;
+}
+.slider__img {
+  max-width: 1150px;
+}
+.slider__photo .slick-dots {
+  left: 0px;
+  top: 0px;
+}
+
+/*----------------------*/
+.price {
+  margin-bottom: 100px;
+}
+.price__inner {
+  position: relative;
+}
+.form {
+  max-width: 420px;
+}
+
+.form__title {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+.form__text {
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+.form__input-name,
+.form__input-phone {
+  width: 100%;
+  border-bottom: 1px solid #131313;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  outline: none;
+}
+.form__input-name::placeholder,
+.form__input-phone::placeholder,
+.form__input-text {
+  color: #6f6f6f;
+  opacity: 0.5;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  margin-bottom: 10px;
+}
+.form__input-text {
+  margin-bottom: 10px;
+}
+.form__label + .form__label {
+  margin-left: 23px;
+}
+.form__label-box {
+  display: flex;
+  margin-bottom: 50px;
+}
+.form__input-radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.form__input-radio:checked + .form__bike {
+  display: block;
+}
+.form__bike-price {
+  font-size: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 221px;
+  height: 112px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ff4040;
+  border-radius: 80%;
+  transform: translateX(-50%);
+}
+.form__bike-price::after {
+  content: "";
+  position: absolute;
+  width: 221px;
+  height: 112px;
+  border-radius: 50%;
+  border: 1px solid #ff4040;
+  top: 10px;
+  right: 0;
+  left: 0;
+}
+.form__bike {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.form__radio-style {
+  width: 80px;
+  height: 12px;
+  border-radius: 30px;
+}
+.form__radio-style--grey {
+  background: #6f6f6f;
+}
+.form__radio-style--white {
+  background: white;
+  border: 1px solid black;
+}
+.form__radio-style--red {
+  background: red;
+}
+.form__btn {
+  background-color: #131313;
+  padding: 28px 71px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 1.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.form__btn:hover {
+  background-color: #ff4040;
+}
+
+/*----------------------*/
+.footer {
+  background-color: #131313;
+}
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+.footer__link {
+  color: white;
+  text-decoration: underline;
+  font-size: 12px;
+  line-height: 15px;
+}
+.footer__social-link + .footer__social-link {
+  margin-left: 26px;
+}
+
+.footer__social-img {
+}
+.footer__contacts-img {
+  margin-right: 10px;
+}
+.footer__contacts {
+  color: white;
+  font-size: 12px;
+  line-height: 15px;
+}
+.footer__contacts-link {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.footer__contacts-link + .footer__contacts-link {
+  margin-top: 10px;
+}
+
+/* ---------------------------------- */
+@media (max-width: 1220px) {
+  .bike__inner {
+    flex-wrap: wrap;
+  }
+  .bike__text {
+    max-width: 100%;
+  }
+  .bike {
+    padding: 0;
+  }
+  .bike__link {
+    margin-top: 30px;
+  }
+  .bike__colomm {
+    margin-bottom: 30px;
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .images__info-img {
+    display: none;
+  }
+  .info__list {
+    flex-basis: 100%;
+  }
+  .info__item-text {
+    max-width: 100%;
+  }
+  .info {
+    padding-top: 50px;
+  }
+  .characteristics {
+    margin-bottom: 50px;
+  }
+  .slider__img {
+    width: 100%;
+  }
+  .slider__item {
+    padding-left: 25px;
+  }
+  .form__bike-img {
+    width: 500px;
+  }
+  .price {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .menu {
+    margin-right: 0;
+  }
+  .characteristics__inner {
+    flex-wrap: wrap;
+  }
+  .characteristics__img {
+    order: -1;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .characteristics__items {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+  .characteristics__name {
+    flex-basis: 50%;
+  }
+  .characteristics__descr {
+    flex-basis: 50%;
+  }
+  .form__label-box {
+    margin-bottom: 300px;
+  }
+  .form__bike {
+    top: auto;
+    bottom: 85px;
+    left: 0;
+    right: 0;
+  }
+  .form__bike-img {
+    width: 430px;
+  }
+  .form__bike-price {
+    right: -20px;
+    transform: translateX(150%);
+    left: 20;
+    top: 0;
+  }
+}
+@media (max-width: 800px) {
+  .form__bike-price {
+    right: 0px;
+    top: -55px;
+    transform: translateX(50%);
+  }
+  .form__bike-price {
+    right: -20px;
+    transform: translateX(150%);
+    left: 20;
+    top: 0;
+  }
+}
+@media (max-width: 670px) {
+  .bike__title {
+    font-size: 44px;
+    line-height: 57px;
+    margin: 30px 0 5px;
+  }
+
+  .bike__subtitle {
+    margin: 5px 0 30px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 29px;
+  }
+  .bike__list {
+    flex-wrap: wrap;
+  }
+  .bike__list-item {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 640px) {
+  .header__inner {
+    display: block;
+    text-align: center;
+  }
+  .menu {
+    margin-top: 50px;
+  }
+  .menu__list {
+    justify-content: space-evenly;
+  }
+  .menu__item + .menu__item {
+    padding-left: 0;
+  }
+}
+@media (max-width: 580px) {
+  .form__bike-price {
+    right: auto;
+    transform: translateX(0%);
+    left: 0;
+    top: -10px;
+    font-size: 18px;
+    display: inline-block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    height: auto;
+  }
+  .form__bike-price span {
+    background-color: #131313;
+    color: #ffffff;
+  }
+  .form__bike-price::after {
+    display: none;
+  }
+  .footer__inner {
+    display: block;
+    height: auto;
+    padding: 15px 15px;
+    text-align: center;
+  }
+  .footer__social-img{
+    padding: 15px 0;
+  }
+  .footer__contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+@media (max-width: 460px) {
+  .menu__list {
+    justify-content: space-between;
+  }
+  .menu__links {
+    padding: 25px 0;
+  }
+  .bike__link,
+  .form__btn {
+    padding: 15px;
+    letter-spacing: 0.9em;
+  }
+  .bike__title {
+    font-size: 44px;
+    line-height: 57px;
+    margin: px 0 5px;
+  }
+  .info__item + .info__item {
+    padding-top: 25px;
+  }
+  .form__bike-img {
+    width: 270px;
+  }
+  .price__inner {
+    text-align: center;
+  }
+  .form__input-text {
+    max-width: 100%;
+  }
+  .form__label-box {
+    justify-content: center;
+  }
+}
+@media (max-width: 400px) {
+  .bike__title {
+    font-size: 34px;
+    line-height: 57px;
+    margin: 30px 0 5px;
+  }
+}
+@media (max-width: 340px) {
+  .menu {
+    margin-top: 30px;
+  }
+  .menu__links {
+    font-size: 12px;
+  }
+}
